@@ -17,6 +17,7 @@ const History = () => {
       <div className='history-container'>
         <div className='history-content-container'>
           <div className="cancelIcon" onClick={() => setRecHistBtn(!recHistbtn)}> <MdCancel className="cancelIcon" color="#260750" size="1.5rem"/> </div>
+          <h1 style={{color: 'white', fontSize: '24px'}}>Your Recent Searches</h1>
           <table>
             <thead>
               <tr>

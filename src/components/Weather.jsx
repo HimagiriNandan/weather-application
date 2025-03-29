@@ -1,14 +1,23 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { ThemeContext } from '../store/ThemeContext'
 import '../styles/Weather.css'
 import wind from "../assets/wind.svg";
 import humidity from "../assets/humidity.svg";
 import Loading from './Loading';
 import History from './History';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Weather = () => {
   const { dailyData, theme, loading, recHistbtn, setRecHistBtn } = useContext(ThemeContext);
   const [index, setIndex] = useState(0);
+
+  useEffect(()=>{
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-in-out'
+    });
+  },[]);
 
   function converttodate(d){
     const dt = new Date(d);
@@ -27,7 +36,7 @@ const Weather = () => {
       {loading && <Loading />}
       {recHistbtn && <History />}
       {(dailyData !== undefined && !loading) && <div className="weather-main-container-all">
-        <div className='weather-main-container'>
+        <div className='weather-main-container' data-aos="fade-left">
 
           <div className={`weather-detail-container ${theme === 'dark' ? 'weather-detail-container-dark' : 'weather-detail-container-light'}`}>
             <div className="weather-detail">
@@ -65,12 +74,12 @@ const Weather = () => {
         </div>
         <div className="weather-main-container-right">
 
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}} data-aos="fade-up">
             <p style={{color: 'white'}}>Find your search history here</p>
             <button className={`history-button ${theme === 'dark' ? 'history-button-dark' : 'history-button-light'}`} onClick={() => setRecHistBtn(!recHistbtn)}>History</button>
           </div>
           <div className='weather-extra-detail-container'>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}>
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="100">
 
                 <b>Wind Speed</b>
                 <div className='weather-extra-detail-item'>
@@ -78,7 +87,7 @@ const Weather = () => {
                   <p>{Math.ceil(dailyData[index].windSpeed)} kmph</p>
                 </div>
               </div>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}>
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="300">
 
                 <b>Humidity</b>
                 <div className='weather-extra-detail-item'>
@@ -88,7 +97,8 @@ const Weather = () => {
               </div>
           </div>
           <div className='weather-extra-detail-container'>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}>
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}
+              data-aos="fade-right" data-aos-delay="500">
 
                 <b>Pressure</b>
                 <div className='weather-extra-detail-item'>
@@ -96,7 +106,7 @@ const Weather = () => {
                   <p>{Math.ceil(dailyData[index].pressure)}mb</p>
                 </div>
               </div>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}>
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="700">
 
                 <b>Ground level</b>
                 <div className='weather-extra-detail-item'>
