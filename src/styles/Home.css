@@ -1,0 +1,16 @@
+*{
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.dark{
+  background-image: linear-gradient(to bottom, #2A105A, #190C32);
+  min-height: 100vh;
+  background-size: cover;
+}
+.light{
+  background-image: linear-gradient(to bottom, #A079E8, #7843DA);
+  min-height: 100vh;
+  background-size: cover;
+}
