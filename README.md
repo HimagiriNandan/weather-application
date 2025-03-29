@@ -15,10 +15,19 @@ This user-friendly application is designed to deliver accurate and visually appe
 
 Here are the screen shots for this application:
 
-![Screenshot_20250330_042143](https://github.com/user-attachments/assets/3399060b-6b96-4518-b708-6df212be4031)
-![Screenshot_20250330_041819](https://github.com/user-attachments/assets/5b9beeb2-5154-4af0-ad9e-593e9aa820c5)
+
+Explore different themes
+
 ![Screenshot_20250330_041504](https://github.com/user-attachments/assets/1f8bca6f-5f57-4ffa-b65e-11aabce11ae5)
 ![Screenshot_20250330_041455](https://github.com/user-attachments/assets/c93a3598-70f4-4cb1-b8cd-eb18f68ea118)
+
+keep track of your 5 recently searched cities
+
+![Screenshot_20250330_041819](https://github.com/user-attachments/assets/5b9beeb2-5154-4af0-ad9e-593e9aa820c5)
+
+Mobile View
+
+![Screenshot_20250330_042143](https://github.com/user-attachments/assets/3399060b-6b96-4518-b708-6df212be4031)
 
 
 #############################################################             HOW TO RUN                     ###################################################################
