@@ -18,8 +18,12 @@ Here are the screen shots for this application:
 
 Explore different themes
 
-![Screenshot_20250330_041504](https://github.com/user-attachments/assets/1f8bca6f-5f57-4ffa-b65e-11aabce11ae5)
-![Screenshot_20250330_041455](https://github.com/user-attachments/assets/c93a3598-70f4-4cb1-b8cd-eb18f68ea118)
+
+![Screenshot_20250330_114016](https://github.com/user-attachments/assets/8ca1d26e-a3f8-4963-af5a-e085d489245b)
+
+
+![Screenshot_20250330_114007](https://github.com/user-attachments/assets/19c0ed6a-6d52-45ea-8182-f02f0514b828)
+
 
 keep track of your 5 recently searched cities
 
@@ -27,10 +31,16 @@ keep track of your 5 recently searched cities
 
 Mobile View
 
-![Screenshot_20250330_042143](https://github.com/user-attachments/assets/3399060b-6b96-4518-b708-6df212be4031)
+![Screenshot_20250330_114138](https://github.com/user-attachments/assets/5c9f215e-1c3f-4660-b211-1788ac74295f)
 
 
-#############################################################             HOW TO RUN                     ###################################################################
+![Screenshot_20250330_113919](https://github.com/user-attachments/assets/6b45df06-3260-4e8b-95f0-76db07de1ddf)
+
+
+
+
+
+#############################################################             HOW TO RUN                ###################################################################
 
 
 Use npm install to install all the packages
