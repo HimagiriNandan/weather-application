@@ -15,9 +15,14 @@ const Weather = () => {
     AOS.init({
         duration: 1000,
         once: true,
-        easing: 'ease-in-out'
+        easing: 'ease-in-out',
+        mirror: true
     });
-  },[]);
+  },[theme]);
+
+  useEffect(() => {
+    setIndex(0);
+  }, [dailyData]);
 
   function converttodate(d){
     const dt = new Date(d);
@@ -72,9 +77,9 @@ const Weather = () => {
           </div>  
 
         </div>
-        <div className="weather-main-container-right">
+        <div className="weather-main-container-right" data-aos="fade-right">
 
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}} data-aos="fade-up">
+          <div style={{width: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center'}} data-aos="fade-up">
             <p style={{color: 'white'}}>Find your search history here</p>
             <button className={`history-button ${theme === 'dark' ? 'history-button-dark' : 'history-button-light'}`} onClick={() => setRecHistBtn(!recHistbtn)}>History</button>
           </div>
@@ -87,7 +92,7 @@ const Weather = () => {
                   <p>{Math.ceil(dailyData[index].windSpeed)} kmph</p>
                 </div>
               </div>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="300">
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="200">
 
                 <b>Humidity</b>
                 <div className='weather-extra-detail-item'>
@@ -98,7 +103,7 @@ const Weather = () => {
           </div>
           <div className='weather-extra-detail-container'>
               <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`}
-              data-aos="fade-right" data-aos-delay="500">
+              data-aos="fade-right" data-aos-delay="300">
 
                 <b>Pressure</b>
                 <div className='weather-extra-detail-item'>
@@ -106,7 +111,7 @@ const Weather = () => {
                   <p>{Math.ceil(dailyData[index].pressure)}mb</p>
                 </div>
               </div>
-              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="700">
+              <div className={`weather-extra-detail ${theme === 'dark' ? 'weather-extra-detail-container-dark' : 'weather-extra-detail-container-light'}`} data-aos="fade-right" data-aos-delay="500">
 
                 <b>Ground level</b>
                 <div className='weather-extra-detail-item'>
