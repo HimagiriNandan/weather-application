@@ -68,3 +68,23 @@ tr:hover {
   font-size: 25px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .history-content-container {
+    width: 90%;
+  }
+  .footer{
+    font-size: 20px;
+  }
+  table {
+    min-width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
